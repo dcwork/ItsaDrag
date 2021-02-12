@@ -1,0 +1,25 @@
+﻿<Window x:Class="ItsaDrag.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow">
+    <Grid>
+        <TreeView AllowDrop="True">
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <EventSetter Event="TreeViewItem.MouseMove"
+                                 Handler="TreeViewItem_MouseMove" />
+                    <EventSetter Event="TreeViewItem.DragOver"
+                                 Handler="TreeViewItem_DragOver" />
+                    <EventSetter Event="TreeViewItem.Drop"
+                                 Handler="TreeViewItem_Drop" />
+                </Style>
+            </TreeView.ItemContainerStyle>
+            <TreeViewItem Header="One">
+                <TreeViewItem Header="Two" />
+            </TreeViewItem>
+            <TreeViewItem Header="Three">
+                <TreeViewItem Header="Four" />
+            </TreeViewItem>
+        </TreeView>
+    </Grid>
+</Window>
