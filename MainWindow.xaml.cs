@@ -5,18 +5,11 @@ using System.Windows.Media;
 
 namespace ItsaDrag
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        private TreeViewItem sourceItem;
-        private TreeViewItem targetItem;
+        private TreeViewItem sourceItem, targetItem;
 
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        public MainWindow() => InitializeComponent();
 
         private void TreeViewItem_MouseMove(object sender, MouseEventArgs e)
         {
@@ -35,16 +28,7 @@ namespace ItsaDrag
             {
                 return;
             }
-            DropInto(sourceItem, targetItem);
-        }
-
-        private void DropInto(TreeViewItem draggedItem, TreeViewItem droppedItem)
-        {
-            if (FindParent<TreeViewItem>(draggedItem) is TreeViewItem parent)
-            {
-                parent.Items.Remove(draggedItem);
-            }
-            droppedItem.Items.Add(draggedItem);
+            // Do something with drag result but app crashes before getting here.
         }
 
         private void TreeViewItem_DragOver(object sender, DragEventArgs e)

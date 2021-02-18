@@ -14,12 +14,8 @@
                                  Handler="TreeViewItem_Drop" />
                 </Style>
             </TreeView.ItemContainerStyle>
-            <TreeViewItem Header="One">
-                <TreeViewItem Header="Two" />
-            </TreeViewItem>
-            <TreeViewItem Header="Three">
-                <TreeViewItem Header="Four" />
-            </TreeViewItem>
+            <TreeViewItem Header="Drag me" />
+            <TreeViewItem Header="And drop here" />
         </TreeView>
     </Grid>
 </Window>
